@@ -1,0 +1,71 @@
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mt20">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title
+              >Read the Quiz Instructions carefully!
+            </mat-card-title>
+          </mat-card-header>
+          <mat-card-content class="ml20">
+            <h1>{{ quiz.title }}</h1>
+            <p>{{ quiz.description }}</p>
+            <mat-divider></mat-divider>
+            <br />
+            <h2>
+              Before you begin, please take a moment to review the following
+              instructions:
+            </h2>
+            <ul>
+              <li>
+                <b>Duration:</b> This quiz exam has a time limit of
+                <b>{{ quiz.noOfQuestions * 3 }} mins</b>. Please ensure you
+                manage your time effectively to complete all questions within
+                the allocated time.
+              </li>
+              <li>
+                <b>Questions:</b> The exam consists of
+                <b>{{ quiz.noOfQuestions }}</b> questions covering a range of
+                topics. Read each question carefully before selecting your
+                answer.
+              </li>
+              <li>
+                <b>Navigation:</b> You can navigate between questions using the
+                navigation buttons provided. Make sure to review your answers
+                before submitting the exam.
+              </li>
+              <li>
+                <b>Submission:</b> Once you have completed all questions, click
+                the "Submit" button to submit your responses. You will not be
+                able to make any changes after submission.
+              </li>
+              <li>
+                <b>Scoring:</b> Your score will be calculated based on the
+                number of correct answers. There is no penalty for incorrect
+                answers, so it's best to attempt every question.
+              </li>
+              <li>
+                <b>Good Luck:</b> Remember to stay focused, take deep breaths,
+                and do your best! Believe in yourself, and trust your knowledge
+                and preparation.
+              </li>
+              <li>
+                Each question carry
+                <b>{{ quiz.maxMarks / quiz.noOfQuestions }}</b> marks
+              </li>
+              <li>No negative marking for wrong answers.</li>
+            </ul>
+            <br />
+            <h4>Click the "Start Quiz" button below to begin. Good luck!</h4>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <button mat-raised-button color="primary" (click)="startQuiz()">
+              Start Quiz
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

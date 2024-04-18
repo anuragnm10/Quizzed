@@ -1,0 +1,49 @@
+<mat-card *ngIf="user">
+  <!-- {{ user | json }} -->
+  <h1>Your Profile Details</h1>
+  <mat-card-content>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="conatiner text-center">
+          <img
+            src="https://t4.ftcdn.net/jpg/00/64/67/27/360_F_64672736_U5kpdGs9keUll8CRQ3p3YaEv2M6qkVY5.jpg"
+            alt=""
+            class="profile-image"
+          />
+          <h1 class="mt20">{{ user?.firstName }} {{ user?.lastName }}</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <table class="table text-center">
+              <tr>
+                <td>Username</td>
+                <td>{{ user?.username }}</td>
+              </tr>
+              <tr>
+                <td>UserId</td>
+                <td>EXAM{{ user?.id }}</td>
+              </tr>
+              <tr>
+                <td>Phone</td>
+                <td>{{ user?.phone }}</td>
+              </tr>
+              <tr>
+                <td>Role</td>
+                <td>{{ user.authorities[0].authority }}</td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td>{{ user.enabled ? "ACTIVE" : "INACTIVE" }}</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-card-actions class="text-center">
+      <button mat-raised-button color="primary">UPDATE</button>
+      <button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>

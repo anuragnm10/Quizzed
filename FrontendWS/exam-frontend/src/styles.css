@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  background-color: #b0c4de;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  background: #4682b4;
+}
+
+.text-center {
+  text-align: center;
+}
+.ml10 {
+  margin-left: 10px !important;
+}
+
+.ml20 {
+  margin-left: 20px !important;
+}
+
+.mr20 {
+  margin-right: 20px !important;
+}
+.mt20 {
+  margin-top: 20px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.ex {
+  width: 100%;
+  height: 100%;
+  background-color: #4682b4;
+  animation: colors 2s infinite;
+}
+
+@keyframes colors {
+  0% {
+    background-color: aqua;
+  }
+  25% {
+    background-color: lightcoral;
+  }
+  50% {
+    background-color: orange;
+  }
+  75% {
+    background-color: purple;
+  }
+  100% {
+    background-color: bisque;
+  }
+}
